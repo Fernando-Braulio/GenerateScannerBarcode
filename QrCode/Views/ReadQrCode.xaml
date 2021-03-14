@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QrCode.Views.ReadQrCode" Title="Ler Qr Code / Cod. Barras">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Margin="10" Text="Scanner" Clicked="OnClickedScanner" VerticalOptions="CenterAndExpand"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

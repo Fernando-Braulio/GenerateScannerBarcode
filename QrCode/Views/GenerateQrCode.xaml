@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:zxcm="clr-namespace:ZXing.Common;assembly=zxing"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms" 
+             x:Class="QrCode.Views.GenerateQrCode" Title="Gerar Qr Code / Cod. Barras">
+    <ContentPage.Content>
+        <Grid Margin="10,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="260" />
+            </Grid.RowDefinitions>
+
+            <Picker x:Name="picker" Grid.Row="0" Title="Escolha o método de codificação" TitleColor="Black">
+                <Picker.Items>
+                    <x:String>AZTEC</x:String>
+                    <x:String>CODE 39</x:String>
+                    <x:String>CODE 128</x:String>
+                    <x:String>EAN 8</x:String>
+                    <x:String>EAN 13</x:String>
+                    <x:String>QR CODE</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Entry Placeholder="Escrever..." Grid.Row="1" PlaceholderColor="Black" x:Name="TextEntry" />
+            <Button Text="Gerar" Grid.Row="2" Clicked="OnClickedGenerater" />
+
+            <zxing:ZXingBarcodeImageView x:Name="QrCodeView" BarcodeFormat="AZTEC" VerticalOptions="CenterAndExpand" Grid.Row="3" IsVisible="False"
+                            WidthRequest="260" HeightRequest="260" BarcodeValue="...">
+                <zxing:ZXingBarcodeImageView.BarcodeOptions>
+                    <zxcm:EncodingOptions Width="260" Height="260"/>
+                </zxing:ZXingBarcodeImageView.BarcodeOptions>
+            </zxing:ZXingBarcodeImageView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
