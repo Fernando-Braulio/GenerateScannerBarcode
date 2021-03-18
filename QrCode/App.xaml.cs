@@ -1,8 +1,4 @@
-﻿using QrCode.Services;
-using QrCode.Views;
-using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace QrCode
 {
@@ -13,7 +9,6 @@ namespace QrCode
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 

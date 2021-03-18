@@ -1,7 +1,4 @@
-﻿using QrCode.ViewModels;
-using QrCode.Views;
-using System;
-using System.Collections.Generic;
+﻿using QrCode.Views;
 using Xamarin.Forms;
 
 namespace QrCode
@@ -11,9 +8,7 @@ namespace QrCode
         public AppShell()
         {
             InitializeComponent();
-            //Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            //Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
-
+            
             Routing.RegisterRoute(nameof(ReadQrCode), typeof(ReadQrCode));
             Routing.RegisterRoute(nameof(GenerateQrCode), typeof(GenerateQrCode));
         }
